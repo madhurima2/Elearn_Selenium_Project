@@ -1,7 +1,7 @@
 package com.training.pom;
 
 import java.util.concurrent.TimeUnit;
-
+import static org.testng.Assert.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,10 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.training.generics.ScreenShot;
+
 public class AddUserELearnPOM {
 	
 	private WebDriver driver; 
-	
+	private ScreenShot screenShotTest;
 	public AddUserELearnPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
@@ -107,6 +109,172 @@ public class AddUserELearnPOM {
 			//Courses categories page
 			driver.findElement(By.xpath("//input[@id='course_category_code']")).sendKeys("BL");
 			driver.findElement(By.xpath("//input[@id='course_category_name']")).sendKeys("Blended Learning");
+			driver.findElement(By.xpath("//input[@id='qf_804699']")).click();
+			driver.findElement(By.xpath("//button[@id='course_category_submit']")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			//Admin >create Course
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'Create a course')]")).click();
+			driver.findElement(By.xpath("//input[@id='update_course_title']")).sendKeys("testing");
+			driver.findElement(By.xpath("//input[@id='visual_code']")).sendKeys("tes");
+			driver.findElement(By.xpath("//div[17]//label[1]")).click();
+			
+			//retrieve value from Database
+			
+		}
+		public void createMultipleCategoryCourse()
+		{
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Courses categories')]")).click();
+			driver.findElement(By.xpath("//div[@class='actions']//a//img")).click();
+			
+			//Courses categories page
+			driver.findElement(By.xpath("//input[@id='course_category_code']")).sendKeys("BL");
+			driver.findElement(By.xpath("//input[@id='course_category_name']")).sendKeys("Blended Learning");
+			driver.findElement(By.xpath("//input[@id='qf_804699']")).click();
+			driver.findElement(By.xpath("//button[@id='course_category_submit']")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			//Admin >create Course
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'Create a course')]")).click();
+			driver.findElement(By.xpath("//input[@id='update_course_title']")).sendKeys("Selenium");
+			driver.findElement(By.xpath("//input[@id='visual_code']")).sendKeys("BL");
+			
+			driver.findElement(By.xpath("//span[@class='select2 select2-container select2-container--default select2-container--below select2-container--focus']//ul[@class='select2-selection__rendered']")).sendKeys("Manzoor");
+			
+			WebElement sub1=driver.findElement(By.xpath("//button[@id='course_category_submit']"));
+			sub1.click();
+			System.out.println("1st category and course added");
+			driver.findElement(By.xpath("//div[17]//label[1]")).click();
+			screenShotTest.captureScreenShot("Course Category 1 added");
+			
+			//2nd category
+			
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Courses categories')]")).click();
+			driver.findElement(By.xpath("//div[@class='actions']//a//img")).click();
+			
+			//Courses categories page
+			driver.findElement(By.xpath("//input[@id='course_category_code']")).sendKeys("WL");
+			driver.findElement(By.xpath("//input[@id='course_category_name']")).sendKeys("WebILT");
+			driver.findElement(By.xpath("//input[@id='qf_804699']")).click();
+			driver.findElement(By.xpath("//button[@id='course_category_submit']")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			//Admin >create Course
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'Create a course')]")).click();
+			driver.findElement(By.xpath("//input[@id='update_course_title']")).sendKeys("Selenium Course");
+			driver.findElement(By.xpath("//input[@id='visual_code']")).sendKeys("WL");
+			
+			driver.findElement(By.xpath("//span[@class='select2 select2-container select2-container--default select2-container--below select2-container--focus']//ul[@class='select2-selection__rendered']")).sendKeys("Manzoor");
+			
+			WebElement sub2=driver.findElement(By.xpath("//button[@id='course_category_submit']"));
+			sub2.click();
+			System.out.println("2nd category and course added");
+			driver.findElement(By.xpath("//div[17]//label[1]")).click();
+			screenShotTest.captureScreenShot("Course Category 2 added");
+			
+			
+			
+			//3rd category
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Courses categories')]")).click();
+			driver.findElement(By.xpath("//div[@class='actions']//a//img")).click();
+			
+			//Courses categories page
+			driver.findElement(By.xpath("//input[@id='course_category_code']")).sendKeys("CL");
+			driver.findElement(By.xpath("//input[@id='course_category_name']")).sendKeys("ClassRoom");
+			driver.findElement(By.xpath("//input[@id='qf_804699']")).click();
+			driver.findElement(By.xpath("//button[@id='course_category_submit']")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			//Admin >create Course
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'Create a course')]")).click();
+			driver.findElement(By.xpath("//input[@id='update_course_title']")).sendKeys("Testing");
+			driver.findElement(By.xpath("//input[@id='visual_code']")).sendKeys("TL");
+			
+			driver.findElement(By.xpath("//span[@class='select2 select2-container select2-container--default select2-container--below select2-container--focus']//ul[@class='select2-selection__rendered']")).sendKeys("Manzoor");
+			
+			WebElement sub3=driver.findElement(By.xpath("//button[@id='course_category_submit']"));
+			sub3.click();
+			System.out.println("3rd category and course added");
+			driver.findElement(By.xpath("//div[17]//label[1]")).click();
+			screenShotTest.captureScreenShot("Course Category 3 added");
+			
+			//4th category
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Courses categories')]")).click();
+			driver.findElement(By.xpath("//div[@class='actions']//a//img")).click();
+			
+			//Courses categories page
+			driver.findElement(By.xpath("//input[@id='course_category_code']")).sendKeys("PJP");
+			driver.findElement(By.xpath("//input[@id='course_category_name']")).sendKeys("Pre Joining");
+			driver.findElement(By.xpath("//input[@id='qf_804699']")).click();
+			driver.findElement(By.xpath("//button[@id='course_category_submit']")).click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			
+			//Admin >create Course
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'Create a course')]")).click();
+			driver.findElement(By.xpath("//input[@id='update_course_title']")).sendKeys("JAVA");
+			driver.findElement(By.xpath("//input[@id='visual_code']")).sendKeys("JV");
+			
+			driver.findElement(By.xpath("//span[@class='select2 select2-container select2-container--default select2-container--below select2-container--focus']//ul[@class='select2-selection__rendered']")).sendKeys("Manzoor");
+			
+			WebElement sub4=driver.findElement(By.xpath("//button[@id='course_category_submit']"));
+			sub4.click();
+			System.out.println("4th category and course added");
+			driver.findElement(By.xpath("//div[17]//label[1]")).click();
+			screenShotTest.captureScreenShot("Course Category 4 added");
+			
+		}
+		
+		public void invalidCreateCategoryCourse()
+		{
+			driver.findElement(By.xpath("//a[contains(text(),'Administration')]")).click();
+			
+			driver.findElement(By.xpath("//a[contains(text(),'Courses categories')]")).click();
+			driver.findElement(By.xpath("//div[@class='actions']//a//img")).click();
+			
+			//Courses categories page
+			driver.findElement(By.xpath("//input[@id='course_category_code']")).sendKeys("asd#@!#");
+			driver.findElement(By.xpath("//input[@id='course_category_name']")).sendKeys("'!@##!@");
+			
+			
+			
+			
+			// Either
+			WebElement element = driver.findElement(By.name("userName"));
+			element.sendKeys("tutorial");
+			
+			String text = element.getAttribute("value");
+
+			System.out.println(element.getAttribute("type"));
+			System.out.println(element.getAttribute("size"));
+			
+			assertEquals(text, "tutorial");
+				
+			
+			
+			//Verification 
+			
+			try {
+				String expectedTitle = null;
+				assertEquals(driver.getTitle(), expectedTitle);
+			} catch (Exception e) {
+				e.printStackTrace(); 
+			}
 			driver.findElement(By.xpath("//input[@id='qf_804699']")).click();
 			driver.findElement(By.xpath("//button[@id='course_category_submit']")).click();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

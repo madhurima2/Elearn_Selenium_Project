@@ -2,61 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38505" started-at="2019-11-07T05:52:47Z" finished-at="2019-11-07T05:53:25Z">
+  <suite name="Default suite" duration-ms="34213" started-at="2019-11-08T10:50:00Z" finished-at="2019-11-08T10:50:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38505" started-at="2019-11-07T05:52:47Z" finished-at="2019-11-07T05:53:25Z">
-      <class name="com.training.sanity.tests.ELTC_043_Assignment">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_043_Assignment@457e2f02]" name="setUpBeforeClass" is-config="true" duration-ms="14" started-at="2019-11-07T11:22:47Z" finished-at="2019-11-07T11:22:47Z">
+    <test name="Default test" duration-ms="34213" started-at="2019-11-08T10:50:00Z" finished-at="2019-11-08T10:50:34Z">
+      <class name="com.training.sanity.tests.ELTC_075_MultipleCourseandCategory">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.ELTC_075_MultipleCourseandCategory@457e2f02]" name="setUpBeforeClass" is-config="true" duration-ms="23" started-at="2019-11-08T16:20:00Z" finished-at="2019-11-08T16:20:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.ELTC_043_Assignment@457e2f02]" name="setUp" is-config="true" duration-ms="19151" started-at="2019-11-07T11:22:47Z" finished-at="2019-11-07T11:23:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.ELTC_075_MultipleCourseandCategory@457e2f02]" name="setUp" is-config="true" duration-ms="26575" started-at="2019-11-08T16:20:00Z" finished-at="2019-11-08T16:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.ELTC_043_Assignment@457e2f02]" name="validLoginTest" duration-ms="5394" started-at="2019-11-07T11:23:06Z" finished-at="2019-11-07T11:23:11Z">
+        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.ELTC_075_MultipleCourseandCategory@457e2f02]" name="validLoginTest" duration-ms="7582" started-at="2019-11-08T16:20:27Z" finished-at="2019-11-08T16:20:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method status="FAIL" signature="StudentAssignmentTest()[pri:0, instance:com.training.sanity.tests.ELTC_043_Assignment@457e2f02]" name="StudentAssignmentTest" is-config="true" duration-ms="13910" started-at="2019-11-07T11:23:11Z" finished-at="2019-11-07T11:23:25Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='btn btn-lg btn-success btn-block']"}
-  (Session info: chrome=78.0.3904.87)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-93OHUQJ', ip: '192.168.42.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\MADHUR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60507}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1cfb7c4508bdf79fc5ccc86c70b01821
-*** Element info: {Using=xpath, value=//a[@class='btn btn-lg btn-success btn-block']}]]>
-            </message>
+        <test-method status="FAIL" signature="createMultipleCategoryCourseTest()[pri:0, instance:com.training.sanity.tests.ELTC_075_MultipleCourseandCategory@457e2f02]" name="createMultipleCategoryCourseTest" is-config="true" duration-ms="5" started-at="2019-11-08T16:20:34Z" finished-at="2019-11-08T16:20:34Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='btn btn-lg btn-success btn-block']"}
-  (Session info: chrome=78.0.3904.87)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-93OHUQJ', ip: '192.168.42.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: C:\Users\MADHUR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60507}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1cfb7c4508bdf79fc5ccc86c70b01821
-*** Element info: {Using=xpath, value=//a[@class='btn btn-lg btn-success btn-block']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.training.sanity.tests.ELTC_043_Assignment.StudentAssignmentTest(ELTC_043_Assignment.java:79)
+              <![CDATA[java.lang.NullPointerException
+	at com.training.sanity.tests.ELTC_075_MultipleCourseandCategory.createMultipleCategoryCourseTest(ELTC_075_MultipleCourseandCategory.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -86,11 +53,11 @@ Session ID: 1cfb7c4508bdf79fc5ccc86c70b01821
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StudentAssignmentTest -->
-      </class> <!-- com.training.sanity.tests.ELTC_043_Assignment -->
+        </test-method> <!-- createMultipleCategoryCourseTest -->
+      </class> <!-- com.training.sanity.tests.ELTC_075_MultipleCourseandCategory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
